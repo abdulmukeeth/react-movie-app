@@ -1,12 +1,44 @@
-# React + Vite
+# React Movie App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application that allows users to browse popular movies, search for specific titles, and manage a list of favourite movies. This project demonstrates React concepts like routing, state management with Context API, conditional rendering, and API integration.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Home Page:** Displays a list of popular movies fetched from an external API and includes a search functionality.
+- **Favourites Page:** Allows users to add and remove movies from their favourites. Favourite movies are persisted in local storage.
+- **Routing:** Client-side routing is implemented using `react-router-dom` for seamless navigation.
+- **Context API:** Global state management for favourite movies using React's Context API.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (>= 12.x)
+- npm or yarn
+
+### Project Structure
+react-movie-app/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── MovieCard.jsx
+│   │   └── Navbar.jsx
+│   ├── contexts/
+│   │   └── MovieContext.jsx
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   └── Favourites.jsx
+│   ├── services/
+│   │   └── api.js
+│   ├── css/
+│   │   ├── App.css
+│   │   ├── Home.css
+│   │   ├── Favourites.css
+│   │   ├── Navbar.css
+│   │   └── MovieCard.css
+│   ├── App.jsx
+│   └── main.jsx
+├── .gitignore
+├── package.json
+└── README.md
